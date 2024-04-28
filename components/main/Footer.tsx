@@ -1,59 +1,62 @@
 import React from "react";
-import { RxDiscordLogo, RxGithubLogo, RxInstagramLogo, RxTwitterLogo, RxLinkedinLogo,
+import {
+    RxDiscordLogo,
+    RxGithubLogo,
+    RxInstagramLogo,
+    RxLinkedinLogo,
 } from "react-icons/rx";
 
-import { FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
+// import { FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
+// import Link from "next/link";
 
 const Footer = () => {
     return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
             <div className="w-full flex flex-col items-center justify-center m-auto">
                 <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-
-
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <FaLinkedin />
+                        <p className="flex flex-row items-center my-[15px] ">
+                            <RxLinkedinLogo />
                             <span className="text-[15px] ml-[6px]">
-                                <a href="https://www.linkedin.com/in/sumit-kumar-bb4381250/">Linkedin</a>
+                                <a href="https://www.linkedin.com/in/sumit-kumar-bb4381250/">
+                                    Linkedin
+                                </a>
                             </span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <p className="flex flex-row items-center my-[15px] ">
                             <RxGithubLogo />
-                            <span className="text-[15px] ml-[6px]">
-                                <a href="https://github.com/Sumit262601" className="cursor-pointer">Github</a>
-                            </span>
+                            <span className="text-[15px] ml-[6px]"> Github</span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <p className="flex flex-row items-center my-[15px] ">
                             <RxDiscordLogo />
                             <span className="text-[15px] ml-[6px]">Discord</span>
                         </p>
                     </div>
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Social Media</div>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <FaInstagram />
+                        <p className="flex flex-row items-center my-[15px] ">
+                            <RxInstagramLogo />
                             <span className="text-[15px] ml-[6px]">Instagram</span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <FaLinkedin />
+                        <p className="flex flex-row items-center my-[15px] ">
+                            <RxLinkedinLogo />
                             <span className="text-[15px] ml-[6px]">Linkedin</span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <p className="flex flex-row items-center my-[15px] ">
                             <RxDiscordLogo />
                             <span className="text-[15px] ml-[6px]">Discord</span>
                         </p>
                     </div>
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">About</div>
-                        {/* <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        {/* <p className="flex flex-row items-center my-[15px] ">
                             <span className="text-[15px] ml-[6px]">Become Sponsor</span>
                         </p> */}
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <p className="flex flex-row items-center my-[15px] ">
                             <span className="text-[15px] ml-[6px]">Learning about me</span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <p className="flex flex-row items-center my-[15px] ">
                             <span className="text-[15px] ml-[6px]">sumit@gmail.com</span>
                         </p>
                     </div>
@@ -64,7 +67,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
