@@ -6,9 +6,6 @@ import {
     RxLinkedinLogo,
 } from "react-icons/rx";
 
-// import { FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
-// import Link from "next/link";
-
 const Footer = () => {
     return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
