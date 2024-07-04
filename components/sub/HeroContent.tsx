@@ -33,12 +33,13 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing
+            Hey👋
+            <br />
+            I am 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best{" "}
+              Sumit Kumar{" "}
             </span>
-            project exprience
           </span>
         </motion.div>
 
@@ -46,7 +47,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website and
+          I&apos;m a Full Stack Developer with experience in Virtual Education Trust and
           Mobile. Check out my projects and skills.
         </motion.p>
         <motion.a

@@ -47,19 +47,10 @@ const Footer = () => {
                             <span className="text-[15px] ml-[6px]">Discord</span>
                         </p>
                     </div>
-                    <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                        <div className="font-bold text-[16px]">About</div>
-                        <p className="flex flex-row items-center my-[15px] ">
-                            <span className="text-[15px] ml-[6px]">Know about me</span>
-                        </p>
-                        <p className="flex flex-row items-center my-[15px] ">
-                            <span className="text-[15px] ml-[6px]">sumit@gmail.com</span>
-                        </p>
-                    </div>
                 </div>
 
                 <div className="mb-[20px] text-[15px] text-center">
-                    &copy; Sumit Dev 2024 Inc. All rights reserved
+                    &copy; Sumit Dev 2024 ❤️ All rights reserved
                 </div>
             </div>
         </div>
