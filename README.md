@@ -1,6 +1,4 @@
-## Getting Started
-
-# Space Portfolio
+## Space Portfolio
 
 ![profiol3](https://github.com/Sumit262601/Space-Potfolio/assets/127303989/3e89a075-e9cd-431d-8895-c6cbb496e9cf)
 
