@@ -3,6 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --primary: #B46CFF;
+  --secondary: #2A0E61;
+  --tertiary: #2A0E61;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
+
 
 .cursive {
   font-family: "Philosopher", sans-serif;
