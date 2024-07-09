@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 :root{
-  --primary: #B46CFF;
-  --secondary: #2A0E61;
-  --tertiary: #2A0E61;
+  --primary: #b36cff00;
+  --secondary: #714db9;
+  --tertiary: #714db9;
 }
 
 *::-webkit-scrollbar {

@@ -3,14 +3,11 @@ import ProjectCard from "../sub/ProjectCard";
 
 const Projects = () => {
   return (
-    <div
-      className="flex flex-col items-center z-[20] justify-center py-20"
-      id="projects"
-    >
-      <h1 className="text-[60px] cursive font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+    <div className="flex flex-col items-center z-[20] justify-center py-20" id="projects">
+      <h1 className="text-[40px] md:text-[60px] cursive font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
-      <div className="h-full w-full flex-col grid grid-cols-3 md:flex-row gap-10 px-10 z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 sm:px-10 z-10">
         <ProjectCard
           src="/Solar-3D.png"
           title="3D Solar System"
@@ -18,15 +15,7 @@ const Projects = () => {
           technologies="Technologies: HTML | CSS | JavaScript"
           view="https://solar-system-3-d.vercel.app/"
           href="https://github.com/Sumit262601/Solar-System-3D"
-          />
-        {/* <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="In this is project to knows about my skills."
-          technologies="Technologies: HTML | CSS | JavaScript"
-          href="https://github.com/Sumit262601/Solar-System-3D"
-          view=""
-        /> */}
+        />
         <ProjectCard
           src="/SpaceWebsite.png"
           title="Space Potfolio"
@@ -67,16 +56,9 @@ const Projects = () => {
           href="https://github.com/Sumit262601/Disney-Clone"
           view="https://disneyy-clone.vercel.app/"
         />
-        {/* <ProjectCard
-          src="/TextUtilies.png"
-          title="TextUtilies"
-          description="There is text converter in lower, upper, clipboard"
-          technologies="Technologies: React Native | Tailwind | Postcss"
-          href="https://github.com/Sumit262601/Sai-Prerna"
-          view=""
-        /> */}
       </div>
     </div>
+
   );
 };
 

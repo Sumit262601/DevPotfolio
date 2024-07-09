@@ -8,11 +8,19 @@ import {
 
 const Footer = () => {
     return (
-        <div className="w-full h-full text-gray-200 shadow-lg p-[15px] ">
-            <div className="w-full flex flex-col items-center justify-center m-auto">
-                <div className="w-full h-full z-[40] flex flex-row items-center justify-around flex-wrap">
+        <div className="w-full h-full text-gray-200 shadow-lg p-[15px] border-t-2 border-[#2A0E61] ">
+            <div className="w-full flex flex-col items-center justify-center m-auto mt-5">
+                <div className="w-full h-full z-[40] md:flex flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
+                        <p className="flex flex-row items-center my-[15px] ">
+                            <RxInstagramLogo />
+                            <span className="text-[15px] ml-[6px]">
+                                <a href="https://instagram.com/your-instagram-username" className="cursor-pointer">
+                                    Instagram
+                                </a>
+                            </span>
+                        </p>
                         <p className="flex flex-row items-center my-[15px] ">
                             <RxLinkedinLogo />
                             <span className="text-[15px] ml-[6px]">
@@ -29,13 +37,8 @@ const Footer = () => {
                                 </a>
                             </span>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] ">
-                            <RxDiscordLogo />
-                            <span className="text-[15px] ml-[6px]">
-                                <a href="" className="cursor-pointer">Discord</a>
-                            </span>
-                        </p>
                     </div>
+
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Social Media</div>
                         <p className="flex flex-row items-center my-[15px] ">
@@ -61,7 +64,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mb-[20px] text-[15px] text-center">
+                <div className="mb-[20px] mt-5 text-[15px] text-center">
                     &copy; Sumit Dev 2024 ❤️ All rights reserved
                 </div>
             </div>

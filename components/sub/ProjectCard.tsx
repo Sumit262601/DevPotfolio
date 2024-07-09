@@ -23,6 +23,7 @@ const ProjectCard = ({ src, title, description, href, technologies, view }: Prop
         </div>
         <p className="mt-2 text-gray-300">{description.slice(0, 50) + " ..."}</p>
       </div>
+      
       <Image
         src={src}
         alt={title}
@@ -30,14 +31,17 @@ const ProjectCard = ({ src, title, description, href, technologies, view }: Prop
         height={1000}
         className="w-full object-contain"
       />
+
       <div className="p-4">
         <p className="text-white">{technologies}</p>
       </div>
+
       <div className="flex justify-between p-4">
         <p className="text-white flex text-center gap-2 justify-normal">
           Try now
           <ArrowRightIcon className="text-[#b49bff] h-5 w-5 mt-1" />
         </p>
+
         <div className="text-white flex gap-4">
           <a href={href}
             className="py-2 px-3 
@@ -56,6 +60,7 @@ const ProjectCard = ({ src, title, description, href, technologies, view }: Prop
             View More
           </a> */}
         </div>
+        
       </div>
 
     </div>
