@@ -11,6 +11,28 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const HeroContent = () => {
+  const resumePath = '/resume.pdf';
+
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(resumePath);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.setAttribute('download', 'My_Resume.pdf');
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+  } catch (error) {
+      console.error('Error downloading the file:', error);
+      // Handle error as needed
+  }
+  }
+
   return (
     <motion.div
       initial="hidden"
@@ -50,13 +72,22 @@ const HeroContent = () => {
           I&apos;m a Full Stack Developer with experience in Virtual Education Trust and
           Mobile. Check out my projects and skills.
         </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-          href="https://www.linkedin.com/in/sumit-kumar-bb4381250/"
-        >
-          Learn More!
-        </motion.a>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 button-primary p-10 text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+            href="https://www.linkedin.com/in/sumit-kumar-bb4381250/"
+          >
+            Learn More!
+          </motion.a>
+          <motion.p
+            variants={slideInFromRight(1)}
+            className="py-2 button-primary p-10 text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+            onClick={handleDownload}
+          >
+            Download CV
+          </motion.p>
+        </div>
       </div>
 
       <motion.div

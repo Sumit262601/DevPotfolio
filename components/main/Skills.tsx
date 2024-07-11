@@ -18,7 +18,7 @@ const Skills = () => {
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-wrap justify-center gap-5 mt-4">
         {Skill_data.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -30,7 +30,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-wrap justify-center gap-5 mt-4">
         {Frontend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -41,7 +41,8 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+
+      <div className="flex flex-wrap justify-center gap-5 mt-4">
         {Backend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -52,7 +53,8 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+
+      <div className="flex flex-wrap justify-center gap-5 mt-4">
         {Full_stack.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -63,19 +65,8 @@ const Skills = () => {
           />
         ))}
       </div>
-      {/* <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div> */}
 
-      <div className="w-full h-full absolute inset-0 z-[-10] opacity-30 flex items-center justify-center bg-cover">
+      <div className="absolute inset-0 z-[-10] opacity-30 flex items-center justify-center bg-cover">
         <video
           className="w-full h-auto"
           preload="false"
@@ -87,7 +78,6 @@ const Skills = () => {
         />
       </div>
     </section>
-
   );
 };
 

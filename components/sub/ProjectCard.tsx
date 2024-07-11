@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { ArrowRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { FaGithub } from "react-icons/fa";
 
 interface Props {
   src: string;
@@ -50,10 +51,10 @@ const ProjectCard = ({ src, title, description, href, technologies, view }: Prop
             rel="noopener noreferrer"
             className="py-2 px-3 
             button-primary text-center 
-            text-white 
+            text-white flex gap-2
             rounded-lg max-w-[200px]"
           >
-            View code
+            View code <FaGithub className="mt-1" />
           </a>
         </div>
 

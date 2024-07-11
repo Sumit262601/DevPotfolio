@@ -18,7 +18,7 @@ const Projects = () => {
       <h1 className="text-[40px] md:text-[60px] cursive font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 sm:px-10 z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 sm:px-10 z-10">
         {All_Projects.slice(0, visibleProjects).map((project, index) => (
           <ProjectCard
             key={index}
@@ -31,6 +31,7 @@ const Projects = () => {
           />
         ))}
       </div>
+
       {visibleProjects < All_Projects.length && (
         <div className="flex justify-center mt-10">
           <button
