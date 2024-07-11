@@ -1,62 +1,46 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import ProjectCard from "../sub/ProjectCard";
+import { All_Projects } from "@/constants/project"
 
 const Projects = () => {
+  // Set the initial state to show a limited number of projects
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  // Handle the "See More" button click
+  const handleSeeMore = () => {
+    setVisibleProjects((prev) => prev + 3); // Show 3 more projects each time
+  };
+
   return (
     <div className="flex flex-col items-center z-[20] justify-center py-20" id="projects">
       <h1 className="text-[40px] md:text-[60px] cursive font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 sm:px-10 z-10">
-        <ProjectCard
-          src="/Solar-3D.png"
-          title="3D Solar System"
-          description="This 3D-Solar System know about our solar system"
-          technologies="Technologies: HTML | CSS | JavaScript"
-          view="https://solar-system-3-d.vercel.app/"
-          href="https://github.com/Sumit262601/Solar-System-3D"
-        />
-        <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Potfolio"
-          description="This is my potfolio to introduce my Skills and Expertise"
-          technologies="Technologies: Next Js | TypeScript | Tailwind | Framer Motion"
-          href="https://github.com/Sumit262601/Space-Potfolio"
-          view="https://github.com/Sumit262601/Space-Potfolio"
-        />
-        <ProjectCard
-          src="/Chatter.png"
-          title="Chatter"
-          description="Here, Is a Chatter Application like a What'sApp"
-          technologies="Technologies: React Native | Tailwind | Firebase | Redux"
-          href="https://github.com/Sumit262601/Chatter"
-          view=""
-        />
-        <ProjectCard
-          src="/Login-UI.png"
-          title="Login UI"
-          description="This UX/UI Login design to apply in your project"
-          technologies="Technologies: React Native | Tailwind | Postcss"
-          href="https://github.com/Sumit262601/Login-UI"
-          view=""
-        />
-        <ProjectCard
-          src="/TextUtilies.png"
-          title="TextUtilies"
-          description="There is text converter in lower, upper, clipboard"
-          technologies="Technologies: HTML | CSS | JavaScript"
-          href="https://github.com/Sumit262601/TextUtilies"
-          view="https://text-utilies.vercel.app/"
-        />
-        <ProjectCard
-          src="/Disney.png"
-          title="Disney Clone"
-          description="This Disney-Clone project to practice React ansd the I should use MovieDatabase Api to fecth this content in latest views"
-          technologies="Technologies: React Js | Bootstrap-5 | MovieDB Api"
-          href="https://github.com/Sumit262601/Disney-Clone"
-          view="https://disneyy-clone.vercel.app/"
-        />
+        {All_Projects.slice(0, visibleProjects).map((project, index) => (
+          <ProjectCard
+            key={index}
+            src={project.src}
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            view={project.view}
+            href={project.href}
+          />
+        ))}
       </div>
+      {visibleProjects < All_Projects.length && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={handleSeeMore}
+            className="px-4 py-2 button-primary text-white rounded-md"
+          >
+            See More
+          </button>
+        </div>
+      )}
     </div>
 
   );
