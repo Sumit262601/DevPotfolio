@@ -89,10 +89,10 @@ export const Socials = [
     name: "GitHub",
     src: "/gitwhite.png",
   },
-  {
-    name: "Discord",
-    src: "/discord.svg",
-  },
+  // {
+  //   name: "Discord",
+  //   src: "/discord.svg",
+  // },
 ];
 
 export const Frontend_skill = [
@@ -216,20 +216,12 @@ export const Full_stack = [
     width: 70,
     height: 70,
   },
-  // {
-  //   skill_name: "Tauri",
-  //   Image: "/tauri.svg",
-  //   width: 70,
-  //   height: 70,
-  // },
-
   {
     skill_name: "Docker",
     Image: "/docker.webp",
     width: 70,
     height: 70,
   },
-
   {
     skill_name: "Figma",
     Image: "/figma.png",
@@ -237,13 +229,4 @@ export const Full_stack = [
     height: 50,
   },
 
-];
-
-export const Other_skill = [
-  // {
-  //   skill_name: "Go",
-  //   Image: "/go.png",
-  //   width: 60,
-  //   height: 60,
-  // },
 ];

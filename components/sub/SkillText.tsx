@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   slideInFromLeft,
-  slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
@@ -17,7 +16,7 @@ const SkillText = () => {
       >
         <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5" />
         <h1 className="Welcome-text text-sm">
-          Think better with Next.js 13
+          Think better with your skills
         </h1>
       </motion.div>
       <motion.div
@@ -25,12 +24,6 @@ const SkillText = () => {
         className="cursive text-[30px] md:text-[40px] text-white font-medium mt-2 text-center mb-3"
       >
         Making apps with modern technologies
-      </motion.div>
-      <motion.div
-        variants={slideInFromRight(0.5)}
-        className="cursive text-[18px] md:text-[20px] text-gray-200 mb-10 mt-2 text-center"
-      >
-        Never miss a task, deadline or idea
       </motion.div>
     </div>
 

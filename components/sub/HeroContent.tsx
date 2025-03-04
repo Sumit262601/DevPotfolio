@@ -7,8 +7,11 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { SparklesIcon } from "@heroicons/react/24/solid";
+import { RainbowButton } from "../magicui/rainbow-button";
+import { SparklesText } from "../magicui/sparkles-text";
+
 
 const HeroContent = () => {
   const resumePath = '/resume.pdf';
@@ -27,10 +30,9 @@ const HeroContent = () => {
 
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
-  } catch (error) {
+    } catch (error) {
       console.error('Error downloading the file:', error);
-      // Handle error as needed
-  }
+    }
   }
 
   return (
@@ -57,11 +59,7 @@ const HeroContent = () => {
           <span>
             Hey👋,
             <br />
-            I am
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              Sumit Kumar{" "}
-            </span>
+            I am <SparklesText text="Sumit Kumar" />  
           </span>
         </motion.div>
 
@@ -69,23 +67,21 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-base md:text-lg text-gray-400 my-4 md:my-5 max-w-[600px] cursive"
         >
-          I&apos;m a Full Stack Developer with experience in Virtual Education Trust and
-          Mobile. Check out my projects and skills.
+          I&apos;m a Full Stack Developer with experience in MERN, HTML5, CSS3, JavaScript, Java, Tailwindcss, Razorpay, GitHub, and
+          React Native.
         </motion.p>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           <motion.a
             variants={slideInFromLeft(1)}
-            className="py-2 button-primary p-10 text-center text-white cursor-pointer rounded-lg max-w-[200px]"
             href="https://www.linkedin.com/in/sumit-kumar-bb4381250/"
           >
-            Learn More!
+            <RainbowButton>Learn More</RainbowButton>
           </motion.a>
           <motion.p
             variants={slideInFromRight(1)}
-            className="py-2 button-primary p-10 text-center text-white cursor-pointer rounded-lg max-w-[200px]"
             onClick={handleDownload}
           >
-            Download CV
+            <RainbowButton>Resume</RainbowButton>
           </motion.p>
         </div>
       </div>

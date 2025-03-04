@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="hidden md:flex w-auto h-full items-center justify-between md:mr-20">
           <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-4 py-2 rounded-full text-gray-200 space-x-10">
             <a href="#about" className="cursor-pointer">
-              AboutUs
+              About me
             </a>
             <a href="#skills" className="cursor-pointer">
               Skills
